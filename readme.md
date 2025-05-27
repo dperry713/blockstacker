@@ -1,0 +1,100 @@
+# dapp-cli-tool
+
+A CLI tool for scaffolding, developing, and managing decentralized application (dApp) projects with Hardhat and Vite + React.
+
+## Features
+
+- Scaffold a new dApp project (Hardhat + Vite + React)
+- Compile smart contracts using Hardhat
+- Deploy contracts to configurable networks
+- Generate React hooks from contract ABI
+- Start the frontend development server
+- Verify contracts on Etherscan
+
+## Installation
+
+Clone this repository and install dependencies:
+
+```sh
+npm install
+```
+
+Build the CLI:
+
+```sh
+npm run build
+```
+
+You can link the CLI globally for development:
+
+```sh
+npm link
+```
+
+## Usage
+
+Run the CLI using:
+
+```sh
+npx ts-node src/index.ts <command>
+```
+
+Or, if installed globally:
+
+```sh
+dappcli <command>
+```
+
+### Commands
+
+#### Scaffold a new dApp project
+
+```sh
+dappcli scaffold <projectName>
+```
+
+Creates a new directory with Hardhat backend and Vite + React frontend.
+
+#### Compile smart contracts
+
+```sh
+dappcli compile
+```
+
+Compiles contracts using Hardhat.
+
+#### Deploy smart contracts
+
+```sh
+dappcli deploy --network <network>
+```
+
+Deploys contracts to the specified network (default: localhost).
+
+#### Generate React hooks from contract ABI
+
+```sh
+dappcli generate-hooks <abiPath>
+```
+
+Generates a `useContract.ts` React hook from the provided ABI JSON file.
+
+#### Start the frontend development server
+
+```sh
+dappcli start
+```
+
+Runs `npm start` in the frontend directory.
+
+#### Verify contract on Etherscan
+
+```sh
+dappcli verify <contractAddress> <contractName> --network <network>
+```
+
+Verifies the contract on Etherscan for the specified network.
+
+## License
+
+ISC
